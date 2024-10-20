@@ -39,6 +39,8 @@ Then create symbolik link to point this direcorty
 ln -s $HOME/dot_config/alacritty ~/.config/alacritty
 ln -s $HOME/dot_config/nvim ~/.config/nvim
 ln -s $HOME/dot_config/tmux ~/.config/tmux
+# Seems needed to allow reloard with R
+ln -s $HOME/dot_config/tmux ~/.tmux
 ```
 
 For ZSH First install it with curl standard method, and then creat symlink with zshrc
