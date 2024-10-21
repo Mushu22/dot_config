@@ -22,6 +22,7 @@ inconsolata, ubuntu, JetBrains, Agave, ...
 First thing to synchronize submodule
 ```
 git init submodule
+git submodule update
 ```
 
 Backup if needed previous configs, and remove them
@@ -40,7 +41,7 @@ ln -s $HOME/dot_config/alacritty ~/.config/alacritty
 ln -s $HOME/dot_config/nvim ~/.config/nvim
 ln -s $HOME/dot_config/tmux ~/.config/tmux
 # Seems needed to allow reloard with R
-ln -s $HOME/dot_config/tmux ~/.tmux
+ln -s $HOME/dot_config/tmux/tmux.conf ~/.tmux.conf
 ```
 
 For ZSH First install it with curl standard method, and then creat symlink with zshrc
@@ -49,5 +50,13 @@ For ZSH First install it with curl standard method, and then creat symlink with 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm ~/.zshrc
 ln -s $HOME/dot_config/zsh/zshrc ~/.zshrc
+# create local zshrc
+touch ~/.zshrc.local
 ```
 
+Update environements
+```
+omz reload
+tmux source-file ~/.tmux.conf
+<tmux-leader R> / <tmux-leader I>
+```
