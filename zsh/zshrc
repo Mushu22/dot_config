@@ -114,4 +114,5 @@ function gg(){
 # Set fdefault user to simplie agnoster prompt
 # DEFAULT_USER=xxxx
 
+PATH+=":~/dot_config/script/"
 source ~/.zshrc.local
