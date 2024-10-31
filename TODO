@@ -1,0 +1,43 @@
+
+idee de config:
+
+faire une cheat sheep tout les racourcis ( terminal / tmux / tmux visual / nvim(mode) / alacrtty ?)/firefox plugin
+amener de la coherence entre les reacrcis
+
+mettre les ligne relative et les utiliser
+
+reprendre ancien vimrc pour inspiration
+
+nvim : ajouter une fonctionalite afichant le nom de la fonction actuel (premiere ligne et/ou status line)
+
+tmux : increase border of selected panel
+
+telescope : recherche inverse field on top
+
+plugin tmux + nvim navigation panel/window similaire
+
+circular windows navigation 
+<Tab> <c-W>w
+<S-Tab> <c-W>W
+jump list 
+C-j C-i
+C-k C-o
+
+mieux comprendre la gestion des presse papier
+Linux :
+	Primary : (select terminal) , paste with midle click
+	Secondary : ??
+	Clipboard : Ctrl + C / Ctrl + V
+	autre:
+
+copy nvim with clipboard = 'unamedplus'
+	Clipboard : "+
+	Primary : "*
+
+	"+ / clipboard -> y/p
+	"* / primary -> Shift Insert
+
+past outside vim : 
+	in linux console : "*
+	ctrl+V : "+
+
