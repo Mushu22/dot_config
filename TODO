@@ -10,8 +10,6 @@ utiliser la touche ² ?
 
 mode multi cursor based on / search and n N
 
-nvim : ajouter une fonctionalite afichant le nom de la fonction actuel (premiere ligne et/ou status line)
-
 tmux : increase border of selected panel
 
 telescope : recherche inverse field on top
