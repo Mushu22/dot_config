@@ -2,10 +2,12 @@
 This repo contains my personal settings for working environment
 - terminal
 - shell
-- vim
+- nvim
+- tmux
+- yazi
 
 ## tools to install 
-git, gitk, alacritty, zsh, oh-my-zsh, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree,
+git, gitk, alacritty, zsh, oh-my-zsh, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree, fd
 
 ## font
 Used font is mononoki from nerd font website : https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip
@@ -42,6 +44,7 @@ ln -s $HOME/dot_config/nvim ~/.config/nvim
 ln -s $HOME/dot_config/tmux ~/.config/tmux
 # Seems needed to allow reloard with R
 ln -s $HOME/dot_config/tmux/tmux.conf ~/.tmux.conf
+ln -s $HOME/dot_config/yazi ~/.config/yazi
 ```
 
 For ZSH First install it with curl standard method, and then creat symlink with zshrc

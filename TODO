@@ -1,8 +1,14 @@
 
 idee de config:
 
+mode visual pas sufisament visible, amelioerer, changer theme ?
+
 faire une cheat sheep tout les racourcis ( terminal / tmux / tmux visual / nvim(mode) / alacrtty ?)/firefox plugin
 amener de la coherence entre les reacrcis
+
+utiliser des outil tel que fzf doxide pour recherche et parcour dossier possible d'integre a yazi
+https://www.youtube.com/watch?v=mmqDYw9C30I
+https://www.youtube.com/watch?v=iKb3cHDD9hw
 
 mettre les ligne relative et les utiliser
 
@@ -28,7 +34,7 @@ mieux comprendre la gestion des presse papier
 Linux :
 	Primary : (select terminal) , paste with midle click
 	Secondary : ??
-	Clipboard : Ctrl + C / Ctrl + V
+	Clipboard : Ctrl + C / Ctrl + V / Ctrl + Shift + V
 	autre:
 
 copy nvim with clipboard = 'unamedplus'

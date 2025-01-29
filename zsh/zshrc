@@ -116,3 +116,6 @@ function gg(){
 
 PATH+=":~/dot_config/script/"
 source ~/.zshrc.local
+
+# Specify editor for yazi (open file)
+export EDITOR="nvim"
