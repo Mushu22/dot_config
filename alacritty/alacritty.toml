@@ -1,6 +1,4 @@
 
-shell = "/bin/zsh"
-
 [font]
 size = 12.0
 
@@ -21,8 +19,8 @@ family = "mononoki Nerd Font Mono"
 style = "Regular"
 
 [window]
-startup_mode = "Fullscreen"
-# startup_mode = "Maximized"
+# startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 
 [scrolling]
 history=50000
@@ -56,4 +54,8 @@ blue = '#6f8fdb'
 magenta = '#e987e9'
 cyan = '#4ac9e2'
 white = '#FFFFFF'
+
+[terminal]
+
+shell = "/bin/zsh"
 
