@@ -114,7 +114,7 @@ function gg(){
 # Set fdefault user to simplie agnoster prompt
 # DEFAULT_USER=xxxx
 
-PATH+=":~/dot_config/script/"
+PATH+=":$HOME/dot_config/script/"
 source ~/.zshrc.local
 
 # Specify editor for yazi (open file)
