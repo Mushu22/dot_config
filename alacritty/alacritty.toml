@@ -55,7 +55,3 @@ magenta = '#e987e9'
 cyan = '#4ac9e2'
 white = '#FFFFFF'
 
-[terminal]
-
-shell = "/bin/zsh"
-
