@@ -39,3 +39,12 @@ Ctrl o
 ctrl i
 
 f/F then , ;
+
+macro:
+q r -> record in r
+    liste des action
+q -> stop recording
+
+@r -> play r
+5@r -> play 5 r
+

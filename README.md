@@ -23,8 +23,7 @@ inconsolata, ubuntu, JetBrains, Agave, ...
 ## Install
 First thing to synchronize submodule
 ```
-git init submodule
-git submodule update
+git submodule update --init --recursive
 ```
 
 Backup if needed previous configs, and remove them
