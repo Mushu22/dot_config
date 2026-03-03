@@ -117,5 +117,8 @@ function gg(){
 PATH+=":$HOME/dot_config/script/"
 source ~/.zshrc.local
 
+# Used to remove USER name from terminal prompt
+export DEFAULT_USER=$USER
+
 # Specify editor for yazi (open file)
 export EDITOR="nvim"
