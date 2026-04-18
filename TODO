@@ -3,12 +3,21 @@ idee de config:
 
 mode visual pas sufisament visible, amelioerer, changer theme ?
 
+mode visual column ctrl+V dont work ?
+
+better substitute :%s//gc
+
 faire une cheat sheep tout les racourcis ( terminal / tmux / tmux visual / nvim(mode) / alacrtty ?)/firefox plugin
+
 amener de la coherence entre les reacrcis
 
 utiliser des outil tel que fzf doxide pour recherche et parcour dossier possible d'integre a yazi
 https://www.youtube.com/watch?v=mmqDYw9C30I
 https://www.youtube.com/watch?v=iKb3cHDD9hw
+
+build and debug eg C++ 
+    https://igorlfs.github.io/neovim-cpp-dbg
+    vimux plugin ?
 
 mettre les ligne relative et les utiliser
 
@@ -19,6 +28,7 @@ mode multi cursor based on / search and n N
 tmux : increase border of selected panel
 
 telescope : recherche inverse field on top
+
 telescope : permetre la fermeture de buffer depuis la liste des buffers
 
 plugin tmux + nvim navigation panel/window similaire
@@ -30,21 +40,5 @@ jump list
 C-j C-i
 C-k C-o
 
-mieux comprendre la gestion des presse papier
-Linux :
-	Primary : (select terminal) , paste with midle click
-	Secondary : ??
-	Clipboard : Ctrl + C / Ctrl + V / Ctrl + Shift + V
-	autre:
-
-copy nvim with clipboard = 'unamedplus'
-	Clipboard : "+
-	Primary : "*
-
-	"+ / clipboard -> y/p
-	"* / primary -> Shift Insert
-
-past outside vim : 
-	in linux console : "*
-	ctrl+V : "+
+mieux comprendre la gestion des presse papier: note_clipboard.txt
 

@@ -1,0 +1,50 @@
+Linux :
+	Primary : (select terminal) , paste with midle click
+	Secondary : ??
+	Clipboard : Ctrl + C / Ctrl + V / Ctrl + Shift + V
+	autre:
+
+copy nvim with clipboard = 'unamedplus'
+	Clipboard : "+
+	Primary : "*
+
+	"+ / clipboard -> y/p
+	"* / primary -> Shift Insert
+
+past outside vim : 
+	in linux console : "*
+	ctrl+V : "+
+
+coller:
+    terminal
+        Shift + Insert : Primary
+        Ctrl + Shift + V : Clipboard
+        Molette : Clipboard
+
+    firefox
+        Shift + Insert: clipboard
+        Ctrl + Shift + V: clipboard
+        Ctrl + V: clipboard
+        Molette : primary
+
+    nvim
+        Shift + Insert : primary
+        Ctrl + Shift + V: clipboard
+        Molette: clipboard
+        p : registre vim
+
+copie:
+    nvim:
+        yank/delete: clipboard
+
+    terminal:
+        slection souris : clipboard + primary
+
+    tmux viusal:
+        enter : clipboard
+
+    firefox:
+        Ctrl + C : Clipboard + primary
+
+
+
