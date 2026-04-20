@@ -1,6 +1,10 @@
 
 idee de config:
 
+git management: gitsign, fugitive lazygit, neogit, gitgraph ..
+
+opencode for ai integration
+
 mode visual pas sufisament visible, amelioerer, changer theme ?
 
 mode visual column ctrl+V dont work ?
@@ -21,7 +25,7 @@ build and debug eg C++
 
 mettre les ligne relative et les utiliser
 
-utiliser la touche ² ?
+utiliser la touche ² (escape)?
 
 mode multi cursor based on / search and n N
 
