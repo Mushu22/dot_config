@@ -1,0 +1,25 @@
+# Based from https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+
+# Config relating to the Lazygit UI
+gui:
+
+  # Nerd fonts version to use.
+  # One of: '2' | '3' | empty string (default)
+  # If empty, do not show icons.
+  nerdFontsVersion: "3"
+
+  # Default size for focused window. Can be changed from within Lazygit with '+'
+  # and '_' (but this won't change the default).
+  # One of: 'normal' (default) | 'half' | 'full'
+  screenMode: half
+
+# Config relating to git
+git:
+
+  # Config for showing the log in the commits view
+  log:
+
+    # displays the whole git graph by default in the commits view (equivalent to
+    # passing the `--all` argument to `git log`)
+    showWholeGraph: true
+

@@ -41,6 +41,7 @@ Then create symbolik link to point this direcorty
 ln -s $HOME/dot_config/alacritty ~/.config/alacritty
 ln -s $HOME/dot_config/nvim ~/.config/nvim
 ln -s $HOME/dot_config/tmux ~/.config/tmux
+ln -s $HOME/dot_config/lazygit ~/.config/lazygit
 # Seems needed to allow reloard with R
 ln -s $HOME/dot_config/tmux/tmux.conf ~/.tmux.conf
 ln -s $HOME/dot_config/yazi ~/.config/yazi
