@@ -7,7 +7,7 @@ This repo contains my personal settings for working environment
 - yazi
 
 ## tools to install 
-git, gitk, alacritty, zsh, oh-my-zsh, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree, fd
+git, gitk, alacritty, zsh, oh-my-zsh, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree, fd, lazygit, tmuxinator, opencode
 
 ## font
 Used font is mononoki from nerd font website : https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.zip
