@@ -77,3 +77,6 @@ vim.keymap.set("v", "p", '"_dP')
 -- call my custom colorscheme selector
 local colorscheme = require("common.colorscheme")
 vim.keymap.set("n", "<leader>u", colorscheme.select, { desc = "Select UI theme" })
+
+-- Save file with Ctrl + s
+vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Esc><cmd>w<CR>", { desc = "Save file" })
