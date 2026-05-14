@@ -9,16 +9,19 @@ set -euo pipefail
 # --- Variables ---------------------------------------------------------
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-HOME_DIR="$HOME"
-XDG_DIR="$HOME/.config"
 
-XDG_PACKAGES=(nvim tmux alacritty lazygit yazi)
-
-declare -A HOME_FILES=(
-    ["zsh/.zshrc"]=".zshrc"
+# Table: chemin relatif dans le repo → chemin absolu cible
+declare -A LINKS=(
+    ["nvim"]="$HOME/.config/nvim"
+    ["tmux"]="$HOME/.config/tmux"
+    ["alacritty"]="$HOME/.config/alacritty"
+    ["lazygit"]="$HOME/.config/lazygit"
+    ["yazi"]="$HOME/.config/yazi"
+    ["starship/starship.toml"]="$HOME/.config/starship.toml"
+    ["zsh/.zshrc"]="$HOME/.zshrc"
 )
 
-# Dossiers créés par les outils dans ~/.local/share, nettoyés lors du reset
+# Dossiers nettoyés lors d'un reset
 LOCAL_SHARE_DIRS=(
     "$HOME/.local/share/nvim"
     "$HOME/.local/share/tmux"
@@ -76,56 +79,34 @@ unlink_safe() {
 # --- Commandes ---------------------------------------------------------
 
 cmd_install() {
-    step "Installation des packages XDG"
-    for pkg in "${XDG_PACKAGES[@]}"; do
-        link_safe "$DOTFILES/$pkg" "$XDG_DIR/$pkg"
+    step "Installation des liens"
+    for src_rel in "${!LINKS[@]}"; do
+        link_safe "$DOTFILES/$src_rel" "${LINKS[$src_rel]}"
     done
-
-    step "Installation des fichiers HOME"
-    for src_rel in "${!HOME_FILES[@]}"; do
-        local tgt_name="${HOME_FILES[$src_rel]}"
-        link_safe "$DOTFILES/$src_rel" "$HOME_DIR/$tgt_name"
-    done
-
     info "Installation terminée"
 }
 
 cmd_uninstall() {
-    step "Désinstallation des packages XDG"
-    for pkg in "${XDG_PACKAGES[@]}"; do
-        unlink_safe "$XDG_DIR/$pkg" "$DOTFILES/$pkg"
+    step "Désinstallation des liens"
+    for src_rel in "${!LINKS[@]}"; do
+        unlink_safe "${LINKS[$src_rel]}" "$DOTFILES/$src_rel"
     done
-
-    step "Désinstallation des fichiers HOME"
-    for src_rel in "${!HOME_FILES[@]}"; do
-        local tgt_name="${HOME_FILES[$src_rel]}"
-        unlink_safe "$HOME_DIR/$tgt_name" "$DOTFILES/$src_rel"
-    done
-
     info "Désinstallation terminée"
 }
 
 cmd_backup() {
     local backup_dir="$DOTFILES/backups/$(date +%Y%m%d_%H%M%S)"
+    step "Backup vers $backup_dir"
     mkdir -p "$backup_dir"
-    step "Création du backup dans $backup_dir"
 
-    for pkg in "${XDG_PACKAGES[@]}"; do
-        local tgt="$XDG_DIR/$pkg"
+    for src_rel in "${!LINKS[@]}"; do
+        local tgt="${LINKS[$src_rel]}"
         if [[ -e "$tgt" || -L "$tgt" ]]; then
-            # -rL : copie récursive en suivant les symlinks (on veut les fichiers réels)
-            cp -rL "$tgt" "$backup_dir/$pkg"
-            info "Sauvegardé : $tgt"
-        else
-            warn "$tgt n'existe pas, ignoré"
-        fi
-    done
-
-    for src_rel in "${!HOME_FILES[@]}"; do
-        local tgt_name="${HOME_FILES[$src_rel]}"
-        local tgt="$HOME_DIR/$tgt_name"
-        if [[ -e "$tgt" || -L "$tgt" ]]; then
-            cp -rL "$tgt" "$backup_dir/$tgt_name"
+            # On reproduit la structure relative dans le backup pour éviter
+            # les collisions de noms (ex: deux fichiers nommés "config")
+            local backup_path="$backup_dir/$src_rel"
+            mkdir -p "$(dirname "$backup_path")"
+            cp -rL "$tgt" "$backup_path"
             info "Sauvegardé : $tgt"
         else
             warn "$tgt n'existe pas, ignoré"
@@ -166,13 +147,9 @@ cmd_reset() {
 }
 
 cmd_list() {
-    echo "Packages XDG  (→ ~/.config/) :"
-    for pkg in "${XDG_PACKAGES[@]}"; do
-        echo "  - $pkg"
-    done
-    echo "Fichiers HOME (→ ~) :"
-    for src_rel in "${!HOME_FILES[@]}"; do
-        echo "  - $src_rel → ~/${HOME_FILES[$src_rel]}"
+    echo "Liens configurés :"
+    for src_rel in "${!LINKS[@]}"; do
+        echo "  - $src_rel → ${LINKS[$src_rel]}"
     done
 }
 
@@ -186,7 +163,7 @@ Commandes :
   reinstall  uninstall + install
   backup     Sauvegarde la config actuelle dans backups/<date>/
   reset      uninstall + suppression des données locales (nvim, tmux)
-  list       Liste les packages configurés
+  list       Liste les liens configurés
   help       Affiche cette aide
 EOF
 }

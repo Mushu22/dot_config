@@ -1,0 +1,171 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+palette = "my_theme"
+
+format = """
+[](c1)\
+$os\
+$directory\
+[](bg:c2 fg:c1)\
+$git_branch\
+$git_tag\
+$git_status\
+[](bg:c3 fg:c2)\
+$python\
+$c\
+$nodejs\
+$lua\
+$cmake\
+$rust\
+$docker_context\
+[ ](fg:c3)\
+$character
+"""
+
+right_format = """
+$cmd_duration\
+$status\
+[](fg:cr1)\
+$jobs\
+$time\
+$battery\
+[ ](fg:cr1)\
+"""
+
+# -----------------------
+# Palette de couleurs
+# -----------------------
+[palettes.my_theme]
+c1 = "bright-cyan"
+c2 = "bright-yellow"
+c3 = "bright-green"
+cr1 = "bright-blue"
+cr2 = "bright-purple"
+true-black = "#000000"
+
+# -----------------------
+# OS + drirectory
+# -----------------------
+
+[directory]
+format = "[ $path $read_only](bold bg:c1 fg:true-black)"
+truncation_length = 4
+truncate_to_repo = false
+read_only = "󰌾"
+
+[os]
+disabled = false
+format = "[$symbol](bg:c1 fg:true-black)"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+# -----------------------
+# Git
+# -----------------------
+
+[git_branch]
+format = "[  $branch ](bold bg:c2 fg:true-black)"
+
+[git_tag]
+format = "[ $tag ](bg:c2 fg:true-black)"
+
+[git_status]
+format = "[ $all_status$ahead_behind ](bg:c2 fg:true-black)"
+
+# -----------------------
+# Langages dynamiques
+# -----------------------
+
+[python]
+format = "[  $version( \\($virtualenv\\)) ](bg:c3 fg:true-black)"
+
+[c]
+format = "[  $version ](bg:c3 fg:true-black)"
+
+[nodejs]
+format = "[  $version](bg:c3 fg:true-black)"
+
+[lua]
+format = "[  $version](bg:c3 fg:true-black)"
+
+[cmake]
+format = "[ 󰔶 $version](bg:c3 fg:true-black)"
+
+[rust]
+format = "[  $version](bg:c3 fg:true-black)"
+
+[docker_context]
+format = "[  $context ](bg:c3 fg:true-black)"
+only_with_files = true
+
+# -----------------------
+# End of prompt char
+# -----------------------
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+# -----------------------
+# Durée + statut
+# -----------------------
+
+[cmd_duration]
+format = "[ $duration](fg:yellow)"
+min_time = 1000
+
+[status]
+disabled = false
+symbol = "✘"
+success_symbol = "✔"
+format = "[ $symbol $common_meaning$signal_name$maybe_int](fg:$style) "
+style = "red"
+success_style = "green"
+
+# -----------------------
+# Batterie + job + heure
+# -----------------------
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[ $time](bg:cr1 fg:true-black)"
+
+[battery]
+format = "[ $symbol$percentage ](bg:cr1 fg:true-black)"
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+
+[[battery.display]]
+threshold = 80 # display under 80%
+style = "bg:cr1 fg:true-black"
+
+[jobs]
+symbol = "⚙ "
+format = "[ $symbol$number ](bg:cr1 fg:true-black)"
+threshold = 1
+
