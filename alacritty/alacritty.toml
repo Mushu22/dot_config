@@ -1,18 +1,18 @@
 
 # theme from https://github.com/alacritty/alacritty-theme.git
-general.import = [
-  # "alacritty-theme/themes/alabaster_dark.toml"
-  # "alacritty-theme/themes/kitty.toml"
-  "alacritty-theme/themes/enfocado_dark.toml"
-  # "alacritty-theme/themes/iterm.toml"
-  # "alacritty-theme/themes/catppuccin-mocha.toml"
-  # "alacritty-theme/themes/kanagawa_dragon.toml"
-  # "alacritty-theme/themes/kanagawa_wave.toml"
-  # "alacritty-theme/themes/tokyo_night.toml"
-  # "alacritty-theme/themes/aura.toml"
-  # "alacritty-theme/themes/ayu_dark.toml"
-  # "alacritty-theme/themes/blood_moon.toml"
-  # "alacritty-theme/themes/campbell.toml"
+import = [
+  # "~/dot_config/alacritty/alacritty-theme/themes/alabaster_dark.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/kitty.toml"
+  "~/dot_config/alacritty/alacritty-theme/themes/enfocado_dark.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/iterm.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/catppuccin-mocha.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/kanagawa_dragon.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/kanagawa_wave.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/tokyo_night.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/aura.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/ayu_dark.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/blood_moon.toml"
+  # "~/dot_config/alacritty/alacritty-theme/themes/campbell.toml"
 ]
   
 [font]

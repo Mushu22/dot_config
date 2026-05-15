@@ -9,7 +9,7 @@ $os\
 $directory\
 [](bg:c2 fg:c1)\
 $git_branch\
-$git_tag\
+$git_commit\
 $git_status\
 [](bg:c3 fg:c2)\
 $python\
@@ -28,9 +28,11 @@ $cmd_duration\
 $status\
 [](fg:cr1)\
 $jobs\
+[](bg:cr2 fg:cr1)\
 $time\
+[](bg:cr3 fg:cr2)\
 $battery\
-[ ](fg:cr1)\
+[ ](fg:cr3)\
 """
 
 # -----------------------
@@ -40,8 +42,9 @@ $battery\
 c1 = "bright-cyan"
 c2 = "bright-yellow"
 c3 = "bright-green"
-cr1 = "bright-blue"
-cr2 = "bright-purple"
+cr1 = "bright-cyan"
+cr2 = "bright-blue"
+cr3 = "bright-purple"
 true-black = "#000000"
 
 # -----------------------
@@ -87,8 +90,11 @@ RedHatEnterprise = "󱄛"
 [git_branch]
 format = "[  $branch ](bold bg:c2 fg:true-black)"
 
-[git_tag]
-format = "[ $tag ](bg:c2 fg:true-black)"
+[git_commit]
+format = "[( $tag )](bg:c2 fg:true-black)"
+tag_disabled = false
+only_detached = false
+tag_symbol = ""
 
 [git_status]
 format = "[ $all_status$ahead_behind ](bg:c2 fg:true-black)"
@@ -147,13 +153,18 @@ success_style = "green"
 # Batterie + job + heure
 # -----------------------
 
+[jobs]
+symbol = "⚙ "
+format = "[ $symbol$number ](bg:cr1 fg:true-black)"
+threshold = 1
+
 [time]
 disabled = false
 time_format = "%H:%M"
-format = "[ $time](bg:cr1 fg:true-black)"
+format = "[  $time ](bg:cr2 fg:true-black)"
 
 [battery]
-format = "[ $symbol$percentage ](bg:cr1 fg:true-black)"
+format = "[ $symbol$percentage ](bg:cr3 fg:true-black)"
 full_symbol = "󰁹 "
 charging_symbol = "󰂄 "
 discharging_symbol = "󰂃 "
@@ -161,11 +172,7 @@ unknown_symbol = "󰂑 "
 empty_symbol = "󰂎 "
 
 [[battery.display]]
-threshold = 80 # display under 80%
-style = "bg:cr1 fg:true-black"
+threshold = 90 # display under 90%
+style = "bg:cr3 fg:true-black"
 
-[jobs]
-symbol = "⚙ "
-format = "[ $symbol$number ](bg:cr1 fg:true-black)"
-threshold = 1
 
