@@ -8,7 +8,7 @@ This repo contains my personal settings for working environment
 - lazygit
 
 ## tools to install 
-git, gitk, alacritty, zsh, oh-my-zsh, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree, fd, lazygit, tmuxinator, opencode
+git, gitk, alacritty, zsh, oh-my-zsh, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree, fd, lazygit, tmuxinator, opencode, starship
 
 For ZSH First install it with curl standard method, and then creat symlink with zshrc
 ```
@@ -32,10 +32,12 @@ Other font to try :
 inconsolata, ubuntu, JetBrains, Agave, ...
 
 ## Install
+Script can be used to install symlinks
+```
+install.sh install 
+```
 
-install.sh script can be used to install symlinks
-
-Update environements
+## Update environements
 ```
 omz reload
 tmux source-file ~/.tmux.conf

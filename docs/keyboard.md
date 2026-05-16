@@ -45,18 +45,6 @@ previous jump / next jump
 Ctrl o
 Ctrl i
 
-<<<<<<< Updated upstream
-f/F then , ;
-
-macro:
-q r -> record in r
-    liste des action
-q -> stop recording
-
-@r -> play r
-5@r -> play 5 r
-
-=======
 Ctrl c = esc :  exit insert visual mode / unselect
 
 # motion:
@@ -66,6 +54,14 @@ t/T <char> then ,; : checking for a char in line and go to forward/backward
 u : undo
 Ctrl R : Redo
 
+# macro:
+q r -> record in r
+    liste des action
+q -> stop recording
+
+@r -> play r
+5@r -> play 5 r
+
 # command
 V : visual full line
 
@@ -74,4 +70,3 @@ dd : delete line
 D : delete to the end of lien
 Y : yank to the end of lien
 c :change
->>>>>>> Stashed changes

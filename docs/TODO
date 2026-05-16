@@ -1,48 +1,56 @@
 
-idee de config:
+- cleanup:
+cleanup docs directory
 
-git management: gitsign, fugitive lazygit, neogit, gitgraph ..
+- Review:
+review nvim 
+keep watching nvim quick start and cleaning nvim config
+learn vim motion
 
-opencode for ai integration
-
-mode visual pas sufisament visible, amelioerer, changer theme ?
-
-mode visual column ctrl+V dont work ?
-
-better substitute :%s//gc
-
+- keymap:
+checkhealt, notamnet which key in order to check and clarify all nvim shirtcut: make a cheat sheet
 faire une cheat sheep tout les racourcis ( terminal / tmux / tmux visual / nvim(mode) / alacrtty ?)/firefox plugin
-
 amener de la coherence entre les reacrcis
 
+- nvim config:
+add some enable flag on plugins 
+color words shortcut ?
+mode visual pas sufisament visible, amelioerer, changer theme ?
+circular windows navigation : <Tab> <c-W>w / <S-Tab> <c-W>W
+jump list: C-j C-i / C-k C-o
+
+-nvim plugin:
+enable more completion module and snipet (path, buffer, comandline,...)
+rework keymap for auto comp (tab ?)
+add diagnosis open_float popup
+plugin quick jump by search and shortcut like firefox vimium: veido nvim fr
+gestion des buffer ? next prvious ou harpoon ? or bufferline plugin ? use tab can be an idea also
+telescope : recherche inverse field on top
+telescope : permetre la fermeture de buffer depuis la liste des buffers ou ne pas utilser 
+better substitute :%s//gc / global search and replace from lazyvim distribution
+Should I add lazygit on nvim ?
+build and debug eg C++  / https://igorlfs.github.io/neovim-cpp-dbg / vimux plugin ?
+mode multi cursor based on / search and n N
+
+-nvim keymap:
+ctrl a go to nvimtree and how show/unshow it ?
+
+-ai:
+learn opencode for ai integration
+integrate to nvim ?
+
+-console:
 utiliser des outil tel que fzf doxide pour recherche et parcour dossier possible d'integre a yazi
 https://www.youtube.com/watch?v=mmqDYw9C30I
 https://www.youtube.com/watch?v=iKb3cHDD9hw
 
-build and debug eg C++ 
-    https://igorlfs.github.io/neovim-cpp-dbg
-    vimux plugin ?
+-azert:
+avoid maj for nuimber
+use qwrty
 
-mettre les ligne relative et les utiliser
+-tmux:
+increase border of selected panel
 
-utiliser la touche ² (escape)?
-
-mode multi cursor based on / search and n N
-
-tmux : increase border of selected panel
-
-telescope : recherche inverse field on top
-
-telescope : permetre la fermeture de buffer depuis la liste des buffers
-
-plugin tmux + nvim navigation panel/window similaire
-
-circular windows navigation 
-<Tab> <c-W>w
-<S-Tab> <c-W>W
-jump list 
-C-j C-i
-C-k C-o
-
+-divers:
 mieux comprendre la gestion des presse papier: note_clipboard.txt
 
