@@ -1,7 +1,4 @@
 
-- cleanup:
-cleanup docs directory
-
 - Review:
 review nvim 
 keep watching nvim quick start and cleaning nvim config

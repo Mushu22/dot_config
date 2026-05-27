@@ -68,6 +68,7 @@ https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 
     terminal:
         slection souris : clipboard + primary
+        ctrl + Shift + C : copi terminal
 
     tmux viusal:
         enter : clipboard

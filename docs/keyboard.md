@@ -10,15 +10,21 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 
 - [Terminal / Shell](#terminal--shell)
 - [Tmux](#tmux)
-- [NVIM - Raccourcis de Base](#nvim---raccourcis-de-base)
-  - [Navigation](#navigation)
-  - [Édition de Texte](#édition-de-texte)
-  - [Gestion des Fichiers](#gestion-des-fichiers)
-  - [Recherche et Remplacement](#recherche-et-remplacement)
+- [Vim](#vim)
+  - [Movement](#movement)
+  - [Scroll](#scroll)
+  - [Jump](#jump)
+  - [Mode Insert](#mode-insert)
+  - [Édition](#édition)
+  - [Mode Visual](#mode-visual)
+  - [Macros](#macros)
+  - [Fichiers](#fichiers)
+  - [Recherche](#recherche)
   - [Modes](#modes)
-  - [Fenêtres et Onglets](#fenêtres-et-onglets)
-- [NVIM - Raccourcis Personnalisés](#nvim---raccourcis-personnalisés)
+  - [Fenêtres](#fenêtres)
+- [NVIM - Personnalisés](#nvim---personnalisés)
   - [Général](#général)
+  - [Which-key](#which-key)
   - [Navigation entre Fenêtres](#navigation-entre-fenêtres)
   - [Recherche avec Telescope](#recherche-avec-telescope)
   - [Gestion de Git avec Gitsigns](#gestion-de-git-avec-gitsigns)
@@ -99,9 +105,9 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 | `Leader + Ctrl-s` | Sauvegarder la session (tmux-resurrect) | ✓ |
 | `Leader + Ctrl-r` | Restaurer la session (tmux-resurrect) | ✓ |
 
-## NVIM - Raccourcis de Base
+## Vim
 
-### Navigation
+### Movement
 
 | Raccourci | Description | Type |
 |-----------|-------------|------|
@@ -115,106 +121,131 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 | `gg` | Aller au début du fichier | ✓ |
 | `G` | Aller à la fin du fichier | ✓ |
 | `:10` | Aller à la ligne 10 | ✓ |
-| `Ctrl + f` | Faire défiler vers le bas d'une page | ✓ |
-| `Ctrl + b` | Faire défiler vers le haut d'une page | ✓ |
-| `Ctrl + d` | Faire défiler vers le bas d'une demi-page | ✓ |
-| `Ctrl + u` | Faire défiler vers le haut d'une demi-page | ✓ |
-| `Ctrl + o` | Aller au jump précédent | ✓ |
-| `Ctrl + i` | Aller au jump suivant | ✓ |
-| `f/F <char>` | Rechercher un caractère vers l'avant/arrière dans la ligne | ✓ |
-| `t/T <char>` | Aller jusqu'à un caractère vers l'avant/arrière | ✓ |
 
-### Édition de Texte
+### Scroll
 
 | Raccourci | Description | Type |
 |-----------|-------------|------|
-| `i` | Passer en mode insertion avant le curseur | ✓ |
-| `a` | Passer en mode insertion après le curseur | ✓ |
-| `I` | Passer en mode insertion au début de la ligne | ✓ |
-| `A` | Passer en mode insertion à la fin de la ligne | ✓ |
-| `o` | Insérer une nouvelle ligne en dessous | ✓ |
-| `O` | Insérer une nouvelle ligne au-dessus | ✓ |
-| `x` | Supprimer le caractère sous le curseur | ✓ |
-| `dd` | Supprimer la ligne courante | ✓ |
-| `yy` | Copier la ligne courante | ✓ |
-| `p` | Coller après le curseur | ✓ |
-| `P` | Coller avant le curseur | ✓ |
-| `u` | Annuler la dernière action | ✓ |
-| `Ctrl + r` | Rétablir la dernière action annulée | ✓ |
-| `v` | Passer en mode visuel | ✓ |
-| `V` | Passer en mode visuel ligne | ✓ |
-| `Ctrl + v` | Passer en mode visuel bloc | ✓ |
-| `>` | Indenter vers la droite | ✦ |
-| `<` | Indenter vers la gauche | ✦ |
+| `Ctrl + f` | Page down | ✓ |
+| `Ctrl + b` | Page up | ✓ |
+| `Ctrl + d` | Demi-page down | ✓ |
+| `Ctrl + u` | Demi-page up | ✓ |
+
+### Jump
+
+| Raccourci | Description | Type |
+|-----------|-------------|------|
+| `Ctrl + o` | Jump précédent | ✓ |
+| `Ctrl + i` | Jump suivant | ✓ |
+| `f/F <char>` | Rechercher caractère avant/arrière | ✓ |
+| `t/T <char>` | Aller jusqu'au caractère | ✓ |
+
+### Mode Insert
+
+| Raccourci | Description | Type |
+|-----------|-------------|------|
+| `i` | Insert avant curseur | ✓ |
+| `a` | Insert après curseur | ✓ |
+| `I` | Insert début de ligne | ✓ |
+| `A` | Insert fin de ligne | ✓ |
+| `o` | Nouvelle ligne dessous | ✓ |
+| `O` | Nouvelle ligne dessus | ✓ |
+
+### Édition
+
+| Raccourci | Description | Type |
+|-----------|-------------|------|
+| `x` | Supprimer caractère | ✓ |
+| `dd` | Supprimer ligne | ✓ |
+| `yy` | Copier ligne | ✓ |
+| `p` | Coller après | ✓ |
+| `P` | Coller avant | ✓ |
+| `u` | Undo | ✓ |
+| `Ctrl + r` | Redo | ✓ |
+| `D` | Supprimer fin de ligne | ✓ |
+| `Y` | Copier fin de ligne | ✓ |
+| `c` | Changer | ✓ |
+| `cc` | Changer ligne | ✓ |
+
+### Mode Visual
+
+| Raccourci | Description | Type |
+|-----------|-------------|------|
+| `v` | Mode visuel | ✓ |
+| `V` | Mode visuel ligne | ✓ |
+| `Ctrl + v` | Mode visuel bloc | ✓ |
+| `<` | Indenter à gauche (visual) | ✦ |
+| `>` | Indenter à droite (visual) | ✦ |
 | `=` | Auto-indenter | ✓ |
-| `D` | Supprimer jusqu'à la fin de la ligne | ✓ |
-| `Y` | Copier jusqu'à la fin de la ligne | ✓ |
-| `c` | Changer (supprimer et passer en insertion) | ✓ |
-| `cc` | Changer la ligne entière | ✓ |
-| `<A-j>` | Déplacer les lignes sélectionnées vers le bas | ✦ |
-| `<A-k>` | Déplacer les lignes sélectionnées vers le haut | ✦ |
 
 ### Macros
 
 | Raccourci | Description | Type |
 |-----------|-------------|------|
-| `q<register>` | Enregistrer une macro (ex: `qr`) | ✓ |
-| `q` | Arrêter l'enregistrement | ✓ |
-| `@<register>` | Exécuter une macro (ex: `@r`) | ✓ |
-| `5@r` | Exécuter la macro `r` 5 fois | ✓ |
+| `q<register>` | Enregistrer macro (ex: `qr`) | ✓ |
+| `q` | Arrêter enregistrement | ✓ |
+| `@<register>` | Exécuter macro (ex: `@r`) | ✓ |
+| `5@r` | Exécuter 5 fois | ✓ |
 
-### Gestion des Fichiers
+### Fichiers
 
 | Raccourci | Description | Type |
 |-----------|-------------|------|
-| `:w` | Sauvegarder le fichier | ✓ |
-| `:q` | Quitter le fichier | ✓ |
+| `:w` | Sauvegarder | ✓ |
+| `:q` | Quitter | ✓ |
 | `:wq` | Sauvegarder et quitter | ✓ |
-| `:q!` | Quitter sans sauvegarder | ✓ |
-| `:e <fichier>` | Ouvrir un fichier | ✓ |
-| `:bn` | Aller au buffer suivant | ✓ |
-| `:bp` | Aller au buffer précédent | ✓ |
-| `:bd` | Fermer le buffer courant | ✓ |
+| `:q!` | Quitter sans sauvegarde | ✓ |
+| `:e <fichier>` | Ouvrir fichier | ✓ |
+| `:bn` | Buffer suivant | ✓ |
+| `:bp` | Buffer précédent | ✓ |
+| `:bd` | Fermer buffer | ✓ |
 
-### Recherche et Remplacement
+### Recherche
 
 | Raccourci | Description | Type |
 |-----------|-------------|------|
-| `/motif` | Rechercher un motif | ✓ |
-| `n` | Aller à l'occurrence suivante | ✓ |
-| `N` | Aller à l'occurrence précédente | ✓ |
-| `:%s/ancien/nouveau/g` | Remplacer toutes les occurrences dans le fichier | ✓ |
-| `:%s/ancien/nouveau/gc` | Remplacer avec confirmation | ✓ |
+| `/motif` | Rechercher | ✓ |
+| `n` | Occurrence suivante | ✓ |
+| `N` | Occurrence précédente | ✓ |
+| `:%s/old/new/g` | Remplacer tout | ✓ |
+| `:%s/old/new/gc` | Remplacer avec confirm | ✓ |
 
 ### Modes
 
 | Raccourci | Description | Type |
 |-----------|-------------|------|
-| `Esc` | Passer en mode normal | ✓ |
-| `i` | Passer en mode insertion | ✓ |
-| `v` | Passer en mode visuel | ✓ |
-| `V` | Passer en mode visuel ligne | ✓ |
-| `Ctrl + v` | Passer en mode visuel bloc | ✓ |
-| `:` | Passer en mode commande | ✓ |
+| `Esc` | Mode normal | ✓ |
+| `i` | Mode insertion | ✓ |
+| `v` | Mode visuel | ✓ |
+| `V` | Mode visuel ligne | ✓ |
+| `Ctrl + v` | Mode visuel bloc | ✓ |
 
-### Fenêtres et Onglets
+### Commandes / Terminal
 
 | Raccourci | Description | Type |
 |-----------|-------------|------|
-| `:split` | Diviser la fenêtre horizontalement | ✓ |
-| `:vsplit` | Diviser la fenêtre verticalement | ✓ |
+| `:` | Mode commande | ✓ |
+| `:!` | Run terminal commande | ✓ |
+| `!!` | Insert terminal commande | ✓ |
+
+### Fenêtres
+
+| Raccourci | Description | Type |
+|-----------|-------------|------|
+| `:split` | Split horizontal | ✓ |
+| `:vsplit` | Split vertical | ✓ |
 | `Ctrl + w + s` | Split horizontal | ✓ |
 | `Ctrl + w + v` | Split vertical | ✓ |
-| `Ctrl + w + h` | Aller à la fenêtre de gauche | ✓ |
-| `Ctrl + w + j` | Aller à la fenêtre du bas | ✓ |
-| `Ctrl + w + k` | Aller à la fenêtre du haut | ✓ |
-| `Ctrl + w + l` | Aller à la fenêtre de droite | ✓ |
-| `Ctrl + w + =` | Équilibrer la taille des fenêtres | ✓ |
-| `:tabnew` | Ouvrir un nouvel onglet | ✓ |
-| `gt` | Aller à l'onglet suivant | ✓ |
-| `gT` | Aller à l'onglet précédent | ✓ | |
+| `Ctrl + w + h` | Fenêtre gauche | ✓ |
+| `Ctrl + w + j` | Fenêtre bas | ✓ |
+| `Ctrl + w + k` | Fenêtre haut | ✓ |
+| `Ctrl + w + l` | Fenêtre droite | ✓ |
+| `Ctrl + w + =` | Équilibrer | ✓ |
+| `:tabnew` | Nouvel onglet | ✓ |
+| `gt` | Onglet suivant | ✓ |
+| `gT` | Onglet précédent | ✓ |
 
-## NVIM - Raccourcis Personnalisés
+## NVIM - Personnalisés
 
 ### Général
 
