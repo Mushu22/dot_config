@@ -102,8 +102,8 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 |-----------|-------------|------|
 | `Leader + R` | Recharger la config tmux | ✦ |
 | `Leader + I` | Installer les plugins (TPM) | ✓ |
-| `Leader + Ctrl-s` | Sauvegarder la session (tmux-resurrect) | ✓ |
-| `Leader + Ctrl-r` | Restaurer la session (tmux-resurrect) | ✓ |
+| `Leader + Ctrl-s` | Sauvegarder la session (tmux-resurrect) | ✦ |
+| `Leader + Ctrl-r` | Restaurer la session (tmux-resurrect) | ✦ |
 
 ## Vim
 
