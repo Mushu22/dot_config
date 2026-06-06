@@ -11,7 +11,7 @@ faire une cheat sheep tout les racourcis ( terminal / tmux / tmux visual / nvim(
 amener de la coherence entre les reacrcis
 
 - nvim config:
-add some enable flag on plugins 
+add some enable flag on plugins
 color words shortcut ?
 mode visual pas sufisament visible, amelioerer, changer theme ?
 circular windows navigation : <Tab> <c-W>w / <S-Tab> <c-W>W
@@ -24,7 +24,7 @@ add diagnosis open_float popup
 plugin quick jump by search and shortcut like firefox vimium: veido nvim fr
 gestion des buffer ? next prvious ou harpoon ? or bufferline plugin ? use tab can be an idea also
 telescope : recherche inverse field on top
-telescope : permetre la fermeture de buffer depuis la liste des buffers ou ne pas utilser 
+telescope : permetre la fermeture de buffer depuis la liste des buffers ou ne pas utilser
 better substitute :%s//gc / global search and replace from lazyvim distribution
 Should I add lazygit on nvim ?
 build and debug eg C++  / https://igorlfs.github.io/neovim-cpp-dbg / vimux plugin ?

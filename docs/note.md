@@ -11,6 +11,8 @@ https://neovim.io/doc/user/lua-guide.html
 # nvim from scratch playlist
 https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 
+https://www.youtube.com/playlist?list=PLy68GuC77sURrnMNi2XR1h58m674KOvLG
+
 # nvim help
 : Tutor
 : help xxxx
