@@ -1,3 +1,4 @@
+[general]
 
 # theme from https://github.com/alacritty/alacritty-theme.git
 import = [
