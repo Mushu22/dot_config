@@ -53,7 +53,7 @@ return {
         },
         interactions = {
           chat = {
-            adapter = "opencode",
+            adapter = { name = "opencode", model = "opencode/nemotron-3-ultra-free" },
           },
           inline = {
             adapter = "mammouth",
