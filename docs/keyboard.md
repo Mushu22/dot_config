@@ -270,6 +270,7 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 | `<leader>r` | [R]ename | ✦ |
 | `<leader>s` | [S]earch | ✦ |
 | `<leader>t` | [T]oggle | ✦ |
+| `<leader>a` | [A]I/CodeCompanion | ✦ |
 
 ### Navigation entre Fenêtres
 
@@ -338,3 +339,15 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 | Raccourci | Description | Type |
 |-----------|-------------|------|
 | `\` | Ouvrir/Fermer Neo-tree | ✦ |
+
+### CodeCompanion (IA)
+
+| Raccourci | Description | Type |
+|-----------|-------------|------|
+| `<leader>aa` | Ouvrir le menu d'actions CodeCompanion | ✦ |
+| `<leader>ac` | Basculer le chat CodeCompanion | ✦ |
+| `<leader>an` | Nouveau chat CodeCompanion | ✦ |
+| `<leader>ai` | Prompt inline (normal/visuel) | ✦ |
+| `<leader>ar` | Ajouter la sélection au chat | ✦ |
+| `<leader>ah` | Historique des chats | ✦ |
+| `<leader>acv` | Revue de code (Code Review) | ✦ |
