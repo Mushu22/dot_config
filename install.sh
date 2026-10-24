@@ -18,7 +18,8 @@ declare -A LINKS=(
     ["lazygit"]="$HOME/.config/lazygit"
     ["yazi"]="$HOME/.config/yazi"
     ["starship/starship.toml"]="$HOME/.config/starship.toml"
-    ["zsh/.zshrc"]="$HOME/.zshrc"
+    ["bash/.bashrc"]="$HOME/.bashrc"
+    ["bash/.bash_profile"]="$HOME/.bash_profile"
 )
 
 # Dossiers nettoyés lors d'un reset
