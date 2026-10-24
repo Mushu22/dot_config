@@ -6,6 +6,7 @@ This is a personal dotfiles repository. No build/test/lint pipeline exists. Work
 
 ```
 ├── install.sh              # Main entrypoint: manages all symlinks
+├── README.md               # Input README file for human user
 ├── nvim/                   # Neovim config (lua, lazy.nvim)
 │   ├── init.lua            # Entry: loads common/* + plugins/*
 │   ├── lua/common/         # Core: options, keymaps, autocmds, lazy, colorscheme
@@ -73,7 +74,7 @@ Themes live in `alacritty/alacritty-theme/themes/` (git submodule). Active theme
 ## Common Gotchas
 
 1. **Symlink conflicts:** `install.sh install` fails if target exists. Run `backup` first, or manually remove.
-2. **Font requirement:** `mononoki Nerd Font Mono` must be installed system-wide (see `docs/README.md`).
+2. **Font requirement:** `mononoki Nerd Font Mono` must be installed system-wide (see `README.md`).
 3. **Color mismatch:** Neovim colors may differ inside/outside tmux — known issue (see `docs/TODO.md`).
 
 ## When Editing Configs

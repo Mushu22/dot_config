@@ -1,52 +1,52 @@
-## nvim
+# nvim
 
-# kickstart config
+## kickstart config
 https://github.com/nvim-lua/kickstart.nvim
 
-# lua
+## lua
 https://learnxinyminutes.com/docs/lua/
 :help lua-guide
 https://neovim.io/doc/user/lua-guide.html
 
-# nvim from scratch playlist
+## nvim from scratch playlist
 https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 
 https://www.youtube.com/playlist?list=PLy68GuC77sURrnMNi2XR1h58m674KOvLG
 
-# nvim help
+## nvim help
 : Tutor
 : help xxxx
 <space>sh xxxx
 
-# checkhealth
+## checkhealth
 :checkhealth
 
-# idea of plugins from kickstart
+## idea of plugins from kickstart
 - nvim-autopairs
 - nvim-dap + ui nio ... (debug)
 - indent-blankline
 - nvim-lint
 
-## clipboard
+# clipboard
 
-# Linux :
+## Linux :
 	Primary : (select terminal) , paste with midle click
 	Secondary : ??
 	Clipboard : Ctrl + C / Ctrl + V / Ctrl + Shift + V
 	autre:
 
-# copy nvim with clipboard = 'unamedplus'
+## copy nvim with clipboard = 'unamedplus'
 	Clipboard : "+
 	Primary : "*
 
 	"+ / clipboard -> y/p
 	"* / primary -> Shift Insert
 
-# past outside vim : 
+## past outside vim : 
 	in linux console : "*
 	ctrl+V : "+
 
-# coller:
+## coller:
     terminal
         Shift + Insert : Primary
         Ctrl + Shift + V : Clipboard
@@ -64,7 +64,7 @@ https://www.youtube.com/playlist?list=PLy68GuC77sURrnMNi2XR1h58m674KOvLG
         Molette: clipboard
         p : registre vim
 
-# copie:
+## copie:
     nvim:
         yank/delete: clipboard
 
