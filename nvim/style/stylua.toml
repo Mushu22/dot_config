@@ -1,0 +1,13 @@
+# Style Lua unifié pour la config Neovim
+# Utilisé par conform.nvim : passé explicitement via --config-path
+#   (StyLua ne cherche son fichier de config QUE dans le cwd)
+
+indent_type = "Spaces"
+indent_width = 2
+
+# 160 pour ne pas reformater les longues lignes (ex. strings clang-format inline)
+column_width = 160
+
+# Valeurs par défaut de StyLua, explicitées pour la lisibilité
+quote_style = "AutoPreferDouble"
+call_parentheses = "Always"

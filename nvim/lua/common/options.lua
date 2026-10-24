@@ -70,7 +70,8 @@ vim.opt.cursorline = false
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 5
 
--- set default tab indentation to 4 sapces
+-- Default indentation: 2 spaces (tabs expand to spaces)
+-- Note: for Lua specifically, stylua (nvim/style/stylua.toml) overrides this on save
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 -- indentation / auto indentation (= operator) use space by default

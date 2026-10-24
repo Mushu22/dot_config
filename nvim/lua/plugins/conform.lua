@@ -27,7 +27,8 @@ return {
         -- languages here or re-enable it for the disabled ones.
         -- local disable_filetypes = { c = true, cpp = true, proto = true }
         -- :echo &filetype -> show current file type
-        local disable_filetypes = { c = true, cpp = true, proto = true }
+        local disable_filetypes = { proto = true }
+        -- local disable_filetypes = { c = true, cpp = true, proto = true }
         local lsp_format_opt
 
         -- disable auto format, <leader>f needed to format
@@ -54,12 +55,20 @@ return {
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
 
-      -- Add some extra args for clang-format
+      -- Configs de style centralisées dans `style/`
+      -- (stdpath('config') = ~/.config/nvim, symlink vers nvim/ du repo)
       formatters = {
+        stylua = {
+          -- Épingle la config : stylua ne lit QUE le cwd sinon
+          prepend_args = function()
+            return { '--config-path', vim.fs.joinpath(vim.fn.stdpath 'config', 'style/stylua.toml') }
+          end,
+        },
         ['clang-format'] = {
-          prepend_args = {
-            '-style={BasedOnStyle: Google, ColumnLimit: 120, NamespaceIndentation: All, DerivePointerAlignment: false, PointerAlignment: Left}',
-          },
+          -- -style=file:<fichier> supporté par clang-format >= 17
+          prepend_args = function()
+            return { '-style=file:' .. vim.fs.joinpath(vim.fn.stdpath 'config', 'style/clang-format') }
+          end,
         },
       },
     },

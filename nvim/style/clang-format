@@ -1,0 +1,7 @@
+# Style C/C++ unifié (:help conform, chargé via -style=file:<chemin>)
+# Anciennement inline dans conform.lua — déplacé ici pour centraliser le style
+BasedOnStyle: Google
+ColumnLimit: 160
+NamespaceIndentation: All
+DerivePointerAlignment: false
+PointerAlignment: Left
