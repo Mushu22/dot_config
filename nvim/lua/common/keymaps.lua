@@ -17,17 +17,9 @@ vim.g.maplocalleader = " "
 --   term_mode = "t"
 --   command_mode = "c"
 
--- ESCAPE --
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-
--- use "²" as Escape
-vim.keymap.set("i", "²", "<Esc>")
-vim.keymap.set("n", "²", "<Esc>")
-vim.keymap.set("v", "²", "<Esc>")
-vim.keymap.set("n", "²", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })

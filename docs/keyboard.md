@@ -60,7 +60,7 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 | Raccourci | Description | Type |
 |-----------|-------------|------|
 | `Ctrl + space` | Prefix (remplace Ctrl + b par défaut) | ✦ |
-| `v` | Entrer en mode copie (remplace [) | ✦ |
+| `[` | Entrer en mode copie (défaut tmux) | ✓ |
 
 ### Sessions & Fenêtres
 
@@ -254,7 +254,7 @@ Ce document répertoire les raccourcis clavier pour le terminal, Tmux, Neovim et
 | `<leader>q` | Ouvrir la liste des diagnostics | ✦ |
 | `<Esc>` | Effacer les surlignages de recherche | ✦ |
 | `<Esc><Esc>` | Quitter le mode terminal | ✦ |
-| `²` | Escape (AZERTY) | ✦ |
+
 | `jk` | Quitter mode insertion/visual | ✦ |
 | `<C-s>` | Sauvegarder le fichier | ✦ |
 | `<leader>u` | Sélectionner le thème | ✦ |
