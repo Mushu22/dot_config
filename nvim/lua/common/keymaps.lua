@@ -41,10 +41,10 @@ vim.keymap.set("v", ">", ">gv", { desc = "Right indent visual" })
 --function used to set keymap with soilent mode enabled by default
 --silent mode make no display on the bottom bar
 local silent_keymap = function(mode, lhs, rhs, opts)
-	opts = opts or {}
-	opts.silent = opts.silent ~= false
-	opts.noremap = true
-	vim.keymap.set(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts.silent = opts.silent ~= false
+  opts.noremap = true
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 silent_keymap("n", "<A-j>", ":m .+1<CR>==", { silent = true, desc = "Move line Up" })
