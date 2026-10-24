@@ -2,17 +2,17 @@
 -- Note check formater for file :ConformInfo on open file
 return {
   {
-    'stevearc/conform.nvim',
-    event = { 'BufWritePre' },
-    cmd = { 'ConformInfo' },
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
     keys = {
       {
-        '<leader>f',
+        "<leader>f",
         function()
-          require('conform').format { async = true, lsp_format = 'fallback' }
+          require("conform").format({ async = true, lsp_format = "fallback" })
         end,
-        mode = '',
-        desc = '[F]ormat buffer',
+        mode = "",
+        desc = "[F]ormat buffer",
       },
     },
     opts = {
@@ -44,10 +44,10 @@ return {
       -- link file format to selected formater
       -- Note install formater with mason, :Mason / Menus formatter / select i
       formatters_by_ft = {
-        lua = { 'stylua' },
-        cpp = { 'clang-format' },
-        c = { 'clang-format' },
-        h = { 'clang-format' },
+        lua = { "stylua" },
+        cpp = { "clang-format" },
+        c = { "clang-format" },
+        h = { "clang-format" },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -61,13 +61,13 @@ return {
         stylua = {
           -- Épingle la config : stylua ne lit QUE le cwd sinon
           prepend_args = function()
-            return { '--config-path', vim.fs.joinpath(vim.fn.stdpath 'config', 'style/stylua.toml') }
+            return { "--config-path", vim.fs.joinpath(vim.fn.stdpath("config"), "style/stylua.toml") }
           end,
         },
-        ['clang-format'] = {
+        ["clang-format"] = {
           -- -style=file:<fichier> supporté par clang-format >= 17
           prepend_args = function()
-            return { '-style=file:' .. vim.fs.joinpath(vim.fn.stdpath 'config', 'style/clang-format') }
+            return { "-style=file:" .. vim.fs.joinpath(vim.fn.stdpath("config"), "style/clang-format") }
           end,
         },
       },
