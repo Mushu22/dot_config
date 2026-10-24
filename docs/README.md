@@ -8,16 +8,11 @@ This repo contains my personal settings for working environment
 - lazygit
 
 ## tools to install 
-git, gitk, alacritty, zsh, oh-my-zsh, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree, fd, lazygit, tmuxinator, opencode, starship
+git, gitk, alacritty, tmux, vim, nvim, fdfind, ack, xclip, python, yazi, fzf, tree, fd, lazygit, tmuxinator, opencode, starship
 
-For ZSH First install it with curl standard method, and then creat symlink with zshrc
 ```
-# install oh-my-zsh from https://ohmyz.sh/
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm ~/.zshrc
-ln -s $HOME/dot_config/zsh/zshrc ~/.zshrc
-# create local zshrc
-touch ~/.zshrc.local
+# create local bash
+touch ~/.bash.local
 ```
 
 ## font
@@ -39,7 +34,7 @@ install.sh install
 
 ## Update environements
 ```
-omz reload
-tmux source-file ~/.tmux.conf
+source ~/.bashrc
+tmux source-file ~/.config/tmux/tmux.conf
 <tmux-leader R> / <tmux-leader I>
 ```

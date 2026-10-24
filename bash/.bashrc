@@ -71,3 +71,4 @@ PATH+=":$HOME/dot_config/script/"
 
 # Source local overrides
 [ -f ~/.bash.local ] && source ~/.bash.local
+

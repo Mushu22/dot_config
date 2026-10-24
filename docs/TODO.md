@@ -17,7 +17,10 @@ mode visual pas sufisament visible, amelioerer, changer theme ?
 circular windows navigation : <Tab> <c-W>w / <S-Tab> <c-W>W
 jump list: C-j C-i / C-k C-o
 
--nvim plugin:
+- remove custom 2 key for azert keybpoard
+- remove custom [ v visual mode for tmux
+
+- nvim plugin:
 enable more completion module and snipet (path, buffer, comandline,...)
 rework keymap for auto comp (tab ?)
 add diagnosis open_float popup
