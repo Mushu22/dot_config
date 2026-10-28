@@ -1,54 +1,50 @@
 
-- Review:
-review nvim 
-color theme nvim not the same ith or wothout tmux. Not the same work/home
-keep watching nvim quick start and cleaning nvim config
-learn vim motion
+# install
+Add command need to install external packages (nvim, tmux, yazi"ya pkg install") in instal.sh ?
 
-- keymap:
-checkhealt, notamnet which key in order to check and clarify all nvim shirtcut: make a cheat sheet
-faire une cheat sheep tout les racourcis ( terminal / tmux / tmux visual / nvim(mode) / alacrtty ?)/firefox plugin
-amener de la coherence entre les reacrcis
+# nvim
 
-- nvim config:
+## learn
+keep watching nvim quick start video and cleaning nvim config
+keep learning and cleaning all plugin
+learn
+ - vim motion
+ - vim quickfix
+ - register
+ - history list
+ - diagnosis
+ - LSP linter formater
+
+## keymap
+fix checkheaklth which-key
+update keyboard doc file
+clarify unused key (example ctrl w + ??)
+
+## ideas
 add some enable flag on plugins
-color words shortcut ?
-mode visual pas sufisament visible, amelioerer, changer theme ?
-circular windows navigation : <Tab> <c-W>w / <S-Tab> <c-W>W
-jump list: C-j C-i / C-k C-o
-
- - nvim plugin:
-enable more completion module and snipet (path, buffer, comandline,...)
-rework keymap for auto comp (tab ?)
-add diagnosis open_float popup
-plugin quick jump by search and shortcut like firefox vimium: veido nvim fr
-gestion des buffer ? next prvious ou harpoon ? or bufferline plugin ? use tab can be an idea also
-telescope : recherche inverse field on top
+color words shortcut
+how navigate / show open buffer (bufferline,  harpoon ...), tab ey ?
 telescope : permetre la fermeture de buffer depuis la liste des buffers ou ne pas utilser
+enable more completion module and snipet (path, buffer, comandline,...), improve keymap
+plugin quick jump by search and shortcut like firefox vimium: veido nvim fr
+telescope : recherche inverse field on top
 better substitute :%s//gc / global search and replace from lazyvim distribution
 Should I add lazygit on nvim ?
 build and debug eg C++  / https://igorlfs.github.io/neovim-cpp-dbg / vimux plugin ?
 mode multi cursor based on / search and n N
 
--nvim keymap:
-ctrl a go to nvimtree and how show/unshow it ?
+# ai
+ajouter la config opencode ? 
+mettre  jour config codecompanion (mopdel llocal ?)
 
--ai:
-learn opencode for ai integration
-integrate to nvim ?
-
--console:
+# console
 utiliser des outil tel que fzf doxide pour recherche et parcour dossier possible d'integre a yazi
 https://www.youtube.com/watch?v=mmqDYw9C30I
 https://www.youtube.com/watch?v=iKb3cHDD9hw
 
--azert:
-avoid maj for nuimber
-use qwrty
-
--tmux:
+# tmux
 increase border of selected panel
 
--divers:
+# divers
 mieux comprendre la gestion des presse papier: note_clipboard.txt
 
