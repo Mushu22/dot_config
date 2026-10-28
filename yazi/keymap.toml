@@ -4,3 +4,20 @@
 on   = "<Enter>"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
+
+# replace go downoads with frenchgh name
+[[mgr.prepend_keymap]]
+on   = [ "g", "d" ]
+run  = "cd ~/Téléchargements"
+desc = "Go to the Downloads directory"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "w" ]
+run  = "cd ~/workspace"
+desc = "Go to the Workspace"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "b" ]
+run  = "cd ~/Bureau"
+desc = "Go to the Bureau"
+
